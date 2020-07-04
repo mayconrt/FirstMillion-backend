@@ -6,8 +6,10 @@ module.exports = function(server){
 
     const DailyExpense = require('../api/dailyExpense/dailyExpenseService')
     const Product = require('../api/product/productService')
+    const PurchaseList = require('../api/purchaseList/purchaseListServer')
 
     DailyExpense.register(router, '/dailyExpense')
     Product.register(router, '/product')
+    PurchaseList.register(router, '/purchaseList')
 
 }
