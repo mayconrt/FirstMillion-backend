@@ -5,6 +5,7 @@ const productSchema = new mongoose.Schema({
     product: { type: String, required: true },
     unitValue: { type: Number, min: 0, required: true },
     quantity: { type: Number, min: 0, required: true },
+    category: { type: String, uppercase:true, required: true, default:'ALIMENTACAO' },
     status: { type: String, required: true, uppercase:true, enum:['WIP', 'DONE'], default:'WIP' },
 })
 
